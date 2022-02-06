@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MetrixPeBDModelStoreContainer" CdmEntityContainer="MetrixPeBDEntities">
+    <EntitySetMapping Name="mst_rol">
+      <EntityTypeMapping TypeName="MetrixPeBDModel.mst_rol">
+        <MappingFragment StoreEntitySet="mst_rol">
+          <ScalarProperty Name="id_rol" ColumnName="id_rol" />
+          <ScalarProperty Name="sigla_rol" ColumnName="sigla_rol" />
+          <ScalarProperty Name="cod_rol" ColumnName="cod_rol" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+          <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
+          <ScalarProperty Name="fecha_modificacion" ColumnName="fecha_modificacion" />
+          <ScalarProperty Name="fecha_eliminacion" ColumnName="fecha_eliminacion" />
+          <ScalarProperty Name="cod_usuario_crea" ColumnName="cod_usuario_crea" />
+          <ScalarProperty Name="cod_usuario_modifica" ColumnName="cod_usuario_modifica" />
+          <ScalarProperty Name="cod_usuario_elimina" ColumnName="cod_usuario_elimina" />
+          <ScalarProperty Name="cod_aplicacion_crea" ColumnName="cod_aplicacion_crea" />
+          <ScalarProperty Name="cod_aplicacion_modifica" ColumnName="cod_aplicacion_modifica" />
+          <ScalarProperty Name="cod_aplicacion_elimina" ColumnName="cod_aplicacion_elimina" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuario">
+      <EntityTypeMapping TypeName="MetrixPeBDModel.usuario">
+        <MappingFragment StoreEntitySet="usuario">
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="id_rol" ColumnName="id_rol" />
+          <ScalarProperty Name="id_persona" ColumnName="id_persona" />
+          <ScalarProperty Name="cod_usuario" ColumnName="cod_usuario" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="eliminado" ColumnName="eliminado" />
+          <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
+          <ScalarProperty Name="fecha_modificacion" ColumnName="fecha_modificacion" />
+          <ScalarProperty Name="fecha_eliminacion" ColumnName="fecha_eliminacion" />
+          <ScalarProperty Name="cod_usuario_crea" ColumnName="cod_usuario_crea" />
+          <ScalarProperty Name="cod_usuario_modifica" ColumnName="cod_usuario_modifica" />
+          <ScalarProperty Name="cod_usuario_elimina" ColumnName="cod_usuario_elimina" />
+          <ScalarProperty Name="cod_aplicacion_crea" ColumnName="cod_aplicacion_crea" />
+          <ScalarProperty Name="cod_aplicacion_modifica" ColumnName="cod_aplicacion_modifica" />
+          <ScalarProperty Name="cod_aplicacion_elimina" ColumnName="cod_aplicacion_elimina" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

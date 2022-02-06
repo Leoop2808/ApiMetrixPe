@@ -1,0 +1,5 @@
+D:\MetrixPe\01_ApiMetrixPe\ApiMetrixPeSolution\MetrixPeEntities\bin\Debug\MetrixPeEntities.dll
+D:\MetrixPe\01_ApiMetrixPe\ApiMetrixPeSolution\MetrixPeEntities\bin\Debug\MetrixPeEntities.pdb
+D:\MetrixPe\01_ApiMetrixPe\ApiMetrixPeSolution\MetrixPeEntities\obj\Debug\MetrixPeEntities.csproj.CoreCompileInputs.cache
+D:\MetrixPe\01_ApiMetrixPe\ApiMetrixPeSolution\MetrixPeEntities\obj\Debug\MetrixPeEntities.dll
+D:\MetrixPe\01_ApiMetrixPe\ApiMetrixPeSolution\MetrixPeEntities\obj\Debug\MetrixPeEntities.pdb

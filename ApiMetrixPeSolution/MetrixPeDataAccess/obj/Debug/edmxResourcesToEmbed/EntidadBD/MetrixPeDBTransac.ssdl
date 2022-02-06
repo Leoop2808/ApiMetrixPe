@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MetrixPeDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="mst_rol">
+    <Key>
+      <PropertyRef Name="id_rol" />
+    </Key>
+    <Property Name="id_rol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sigla_rol" Type="varchar" MaxLength="20" />
+    <Property Name="cod_rol" Type="varchar" MaxLength="20" />
+    <Property Name="descripcion" Type="varchar" MaxLength="100" />
+    <Property Name="activo" Type="bit" />
+    <Property Name="eliminado" Type="bit" />
+    <Property Name="fecha_creacion" Type="datetime" />
+    <Property Name="fecha_modificacion" Type="datetime" />
+    <Property Name="fecha_eliminacion" Type="datetime" />
+    <Property Name="cod_usuario_crea" Type="varchar" MaxLength="20" />
+    <Property Name="cod_usuario_modifica" Type="varchar" MaxLength="20" />
+    <Property Name="cod_usuario_elimina" Type="varchar" MaxLength="20" />
+    <Property Name="cod_aplicacion_crea" Type="varchar" MaxLength="20" />
+    <Property Name="cod_aplicacion_modifica" Type="varchar" MaxLength="20" />
+    <Property Name="cod_aplicacion_elimina" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_rol" Type="int" Nullable="false" />
+    <Property Name="id_persona" Type="int" Nullable="false" />
+    <Property Name="cod_usuario" Type="varchar" MaxLength="20" />
+    <Property Name="username" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="600" />
+    <Property Name="activo" Type="bit" />
+    <Property Name="eliminado" Type="bit" />
+    <Property Name="fecha_creacion" Type="datetime" />
+    <Property Name="fecha_modificacion" Type="datetime" />
+    <Property Name="fecha_eliminacion" Type="datetime" />
+    <Property Name="cod_usuario_crea" Type="varchar" MaxLength="20" />
+    <Property Name="cod_usuario_modifica" Type="varchar" MaxLength="20" />
+    <Property Name="cod_usuario_elimina" Type="varchar" MaxLength="20" />
+    <Property Name="cod_aplicacion_crea" Type="varchar" MaxLength="20" />
+    <Property Name="cod_aplicacion_modifica" Type="varchar" MaxLength="20" />
+    <Property Name="cod_aplicacion_elimina" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK_USUARIO_ROL">
+    <End Role="mst_rol" Type="Self.mst_rol" Multiplicity="1" />
+    <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mst_rol">
+        <PropertyRef Name="id_rol" />
+      </Principal>
+      <Dependent Role="usuario">
+        <PropertyRef Name="id_rol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MetrixPeDBModelStoreContainer">
+    <EntitySet Name="mst_rol" EntityType="Self.mst_rol" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_USUARIO_ROL" Association="Self.FK_USUARIO_ROL">
+      <End Role="mst_rol" EntitySet="mst_rol" />
+      <End Role="usuario" EntitySet="usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
